@@ -102,7 +102,7 @@
                 android:id="@+id/tvOrder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Nav_Member"
+                android:text="@string/Nav_Order"
                 android:textColor="@color/NavigationTextBC" />
         </LinearLayout>
 
