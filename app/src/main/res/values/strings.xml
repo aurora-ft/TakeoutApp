@@ -5,6 +5,7 @@
     <string name="Nav_Order">订单</string>
     <string name="Nav_Mine">我的</string>
 
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
