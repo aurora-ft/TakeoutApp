@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TakeoutApp</string>
+    <string name="app_name">吃啥外卖</string>
     <string name="Nav_Home">首页</string>
     <string name="Nav_Member">会员</string>
     <string name="Nav_Order">订单</string>

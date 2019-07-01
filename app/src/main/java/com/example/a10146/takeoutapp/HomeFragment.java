@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment{
     }
 
     public int[] getImageRes() {
-        return new int[]{R.mipmap.chaoshi,R.mipmap.meishi,R.mipmap.mianfeipeisong,R.mipmap.xianguogou};
+        return new int[]{R.mipmap.homecarousel1, R.mipmap.homecarousel2, R.mipmap.homecarousel3};
     }
 
     @Override

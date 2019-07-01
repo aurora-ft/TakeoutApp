@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
     tools:context=".SearchActivity" >
 
     <!-- 搜索栏 -->
@@ -18,9 +20,43 @@
             android:id="@+id/search_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#d3d3d3">
+            android:background="@drawable/shape_radius">
 
         </android.support.v7.widget.SearchView>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fafafa">
+
+
+        <!-- 搜索历史 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="搜索历史"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/search_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
