@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
     android:fitsSystemWindows="true"
-    tools:context=".SearchActivity" >
+    tools:context=".SearchActivity">
 
     <!-- 搜索栏 -->
     <LinearLayout
@@ -20,6 +21,7 @@
             android:id="@+id/search_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:iconifiedByDefault="false"
             android:background="@drawable/shape_radius">
 
         </android.support.v7.widget.SearchView>
@@ -32,6 +34,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#fafafa">
+
 
 
         <!-- 搜索历史 -->

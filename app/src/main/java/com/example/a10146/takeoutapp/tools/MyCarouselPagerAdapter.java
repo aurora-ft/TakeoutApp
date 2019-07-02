@@ -1,4 +1,4 @@
-package com.example.a10146.takeoutapp;
+package com.example.a10146.takeoutapp.tools;
 
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;

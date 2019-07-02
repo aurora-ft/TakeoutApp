@@ -1,4 +1,4 @@
-package com.example.a10146.takeoutapp;
+package com.example.a10146.takeoutapp.mainfragment;
 
 
 import android.content.Intent;
@@ -19,7 +19,10 @@ import android.support.v7.widget.SearchView;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.a10146.takeoutapp.MyCarouselPagerAdapter;
+import com.example.a10146.takeoutapp.homeactivities.class1Activity;
+import com.example.a10146.takeoutapp.tools.MyCarouselPagerAdapter;
+import com.example.a10146.takeoutapp.R;
+import com.example.a10146.takeoutapp.SearchActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,8 +32,10 @@ public class HomeFragment extends Fragment{
     private ViewPager vPager;
     private List<ImageView> mList;
 
-    private SearchView homeSearch;
-    private LinearLayout llClass1, llClass2, llClass3, llClass4, llClass5;
+    private LinearLayout homeSearch;
+    private LinearLayout llClass1, llClass2, llClass3, llClass4, llClass5,
+                         llClass6, llClass7, llClass8, llClass9, llClass10,
+                         llClass11,llClass12,llClass13,llClass14,llClass15;
 
 
     public HomeFragment() {
@@ -50,7 +55,7 @@ public class HomeFragment extends Fragment{
     }
 
     private void initView() {
-        homeSearch = (SearchView) getView().findViewById(R.id.search_bar);
+        homeSearch = (LinearLayout) getView().findViewById(R.id.searchbtn);
         vPager = (ViewPager) getView().findViewById(R.id.home_carousel);
         llClass1 = (LinearLayout)getView().findViewById(R.id.class1);
         llClass2 = (LinearLayout)getView().findViewById(R.id.class2);
@@ -83,11 +88,13 @@ public class HomeFragment extends Fragment{
         }
         MyCarouselPagerAdapter myCarouselPagerAdapter = new MyCarouselPagerAdapter(mList);
         vPager.setAdapter(myCarouselPagerAdapter);
+        llClass1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), class1Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-//
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//    }
 }

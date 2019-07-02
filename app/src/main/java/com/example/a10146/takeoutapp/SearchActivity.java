@@ -1,16 +1,18 @@
 package com.example.a10146.takeoutapp;
 
+
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.inputmethod.InputMethodManager;
 import android.support.v7.widget.SearchView;
-import android.widget.LinearLayout;
+
+import com.example.a10146.takeoutapp.tools.SearchHistoryAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class SearchActivity extends Activity {
 
@@ -21,14 +23,26 @@ public class SearchActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        SearchView sv = (SearchView) findViewById(R.id.search_text);
-//        showSoftInputFromWindow(sv);
+        sSearch = (SearchView) findViewById(R.id.search_text);
         initHistory();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.search_history);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         SearchHistoryAdapter adapter = new SearchHistoryAdapter(hisList);
         recyclerView.setAdapter(adapter);
+        sSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                Intent intent = new Intent(SearchActivity.this,ResultActivity.class);
+                startActivity(intent);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
     }
 
     private void initHistory() {
@@ -38,11 +52,4 @@ public class SearchActivity extends Activity {
         hisList.add(new String("肯德基"));
     }
 
-//    public void showSoftInputFromWindow(SearchView searchView){
-//        searchView.setFocusable(true);
-//        searchView.setFocusableInTouchMode(true);
-//        searchView.requestFocus();
-//        InputMethodManager inputManager = (InputMethodManager) searchView.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-//        inputManager.showSoftInput(searchView, 0);
-//    }
 }
