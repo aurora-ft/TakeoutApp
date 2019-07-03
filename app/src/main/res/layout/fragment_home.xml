@@ -1,15 +1,426 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainfragment.HomeFragment">
+
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="第一个页面" />
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:text="第一个页面" />-->
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 搜索栏 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:padding="5dp">
+
+                <!--<android.support.v7.widget.SearchView-->
+                    <!--android:id="@+id/searchbtn"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:focusable="false"-->
+                    <!--android:background="@drawable/shape_radius">-->
+
+                <!--</android.support.v7.widget.SearchView>-->
+
+                <LinearLayout
+                    android:id="@+id/searchbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_radius"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/search"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="请输入内容"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--**********************************************************-->
+            <!--轮播图-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_carousel"
+                android:layout_width="match_parent"
+                android:layout_height="115dp" />
+
+            <!--**********************************************************-->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:columnCount="5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/class1"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/meishi"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="美食"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class2"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/jingxuanxiaochi"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="精选小吃"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class3"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/kuaishijiancan"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="快食简餐"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class4"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/jiachangcai"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="家常菜"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class5"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/chaoshi"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="超市"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class6"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/mianfeipeisong"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="免费配送"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class7"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/nengliangxican"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="能量西餐"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class8"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/nuanweitangmian"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="暖胃汤面"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class9"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/xiawucha"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="下午茶"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class10"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/xianguogou"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="鲜果购"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class11"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/xianhuadangao"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="鲜花蛋糕"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class12"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/xinshangjia"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="新商家"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class13"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/yiguoliaoli"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="异国料理"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class14"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/zhajilingshi"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="炸鸡零食"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/class15"
+                    android:layout_width="73dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/zhengcanyouxuan"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="正餐优选"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

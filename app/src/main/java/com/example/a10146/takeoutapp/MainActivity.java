@@ -4,12 +4,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.a10146.takeoutapp.mainfragment.HomeFragment;
+import com.example.a10146.takeoutapp.mainfragment.MemberFragment;
+import com.example.a10146.takeoutapp.mainfragment.MineFragment;
+import com.example.a10146.takeoutapp.mainfragment.OrderFragment;
+import com.example.a10146.takeoutapp.tools.MyFragmentPagerAdapter;
 
 import java.util.ArrayList;
 
@@ -181,4 +187,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     //------------------------------------------------------------------
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){  // 主页面返回后不销毁MainActivity
+            moveTaskToBack(true);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }
