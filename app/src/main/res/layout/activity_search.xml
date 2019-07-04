@@ -14,8 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:padding="5dp"
-        android:background="#ff0000">
+        android:padding="5dp">
 
         <android.support.v7.widget.SearchView
             android:id="@+id/search_text"
@@ -43,13 +42,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
-                android:gravity="center_vertical"
-                android:text="搜索历史"/>
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="搜索历史"/>
+
+                <!--删除按钮-->
+                <ImageView
+                    android:id="@+id/del_history"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:foregroundGravity="center"
+                    android:src="@mipmap/dele"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/search_history"

@@ -7,14 +7,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 //import android.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 //import android.widget.SearchView;
-
-import android.support.v7.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +32,7 @@ public class HomeFragment extends Fragment{
     private List<ImageView> mList;
 
     private LinearLayout homeSearch;
+//    private SearchView homeSearch;
     private LinearLayout llClass1, llClass2, llClass3, llClass4, llClass5,
                          llClass6, llClass7, llClass8, llClass9, llClass10,
                          llClass11,llClass12,llClass13,llClass14,llClass15;
